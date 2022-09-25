@@ -5,7 +5,19 @@ import pyautogui as py
 import time
 from tkinter import *
 def busca():
-    py.PAUSE = 0.5
+    py.PAUSE = 1
+    py.leftClick(20, 745)
+    py.write(f'Pasta: {str(entry1.get())}')
+    py.press('Enter')
+    py.leftClick(1125, 160)
+    py.write(str(entry2.get()))
+    py.press('Enter')
+    py.click(195, 220)
+    py.hotkey('ctr', 'c')
+    time.sleep(1)
+    py.leftClick(20, 745)
+    py.write(f'Pasta: {str(entry3.get())}')
+    py.press('Enter')
 
 janela = Tk()
 janela.geometry('400x400')
@@ -17,11 +29,11 @@ entry3 = Entry(janela)
 entry3.place(x=20, y=150, height=20, width=200)
 entry4 = Entry(janela,)
 entry4.place(x=20, y=200, height=20, width=200)
-label1 = Label(janela, text='')
+label1 = Label(janela, text='Nome da pasta onde está o projeto (PyCharmProjects).')
 label1.place(x=20, y=20)
-label2 = Label(janela, text='')
+label2 = Label(janela, text='Nome do arquivo a ser commitado (dentro da pasta)')
 label2.place(x=20, y= 70)
-label3 = Label(janela, text='')
+label3 = Label(janela, text='Pasta onde será colado o projeto par fazer o commit')
 label3.place(x=20, y=120)
 label4 = Label(janela, text='')
 label4.place(x=20, y=170)
