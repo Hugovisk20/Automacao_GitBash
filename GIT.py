@@ -13,7 +13,7 @@ def busca():
     py.write(str(entry2.get()))
     py.press('Enter')
     py.rightClick(195, 220)
-    py.leftClick(275, 559)
+    py.leftClick(266, 556)
     time.sleep(1)
     py.leftClick(20, 745)
     py.write('Pasta: REPOSITORIO_LOCAL_GIT')
@@ -25,6 +25,9 @@ def busca():
     py.rightClick(0, 230)
     py.leftClick(6, 368)
     py.leftClick(630, 220)
+    py.rightClick(1150, 220)
+    py.leftClick(1023, 447)
+
 
 janela = Tk()
 janela.geometry('400x400')
