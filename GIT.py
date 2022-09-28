@@ -6,46 +6,48 @@ import time
 from tkinter import *
 def busca():
     #AUTOMATIZANDO A CÓPIA DO ARQUIVO DO PROJETO PARA OUTRA PASTA PARA FAZER O COMMIT
+    
     py.PAUSE = 1.5
-    py.leftClick(20, 745) #CLICA NO BOTÃO WINDOWS
+    py.leftClick(20, 745)           #CLICA NO BOTÃO WINDOWS
     py.write(f'Pasta: {str(entry1.get())}') #ESCREVE O ENTRY1 NA BARRA DE PESQUISA DO WINDOWS PROCURANDO POR PASTAS
-    py.press('Enter') #PRESSIONA A TECLA ENTER
-    py.leftClick(1125, 160) #CLICA NA BARRA DE PESQUISA DA PASTA
-    py.write(str(entry2.get())) #ESCREVE O ENTRY2 NA BARRA DE PESQUISA DA PASTA
-    py.press('Enter') #PRESSIONA A TECLA ENTER
-    py.rightClick(195, 220) #CLICA COM O DIREITO DO MOUSE NO 1º ARQUIVO
-    py.leftClick(266, 556) #COPIA O ARQUIVO
-    time.sleep(1) #ESPERA 1 SEGUNDO PARA EXECUTAR O PRÓXIMO CÓDIGO
-    py.leftClick(20, 745) #CLICA NO BOTÇAO WINDOWS
+    py.press('Enter')               #PRESSIONA A TECLA ENTER
+    py.leftClick(1125, 160)         #CLICA NA BARRA DE PESQUISA DA PASTA
+    py.write(str(entry2.get()))     #ESCREVE O ENTRY2 NA BARRA DE PESQUISA DA PASTA
+    py.press('Enter')               #PRESSIONA A TECLA ENTER
+    py.rightClick(195, 220)         #CLICA COM O DIREITO DO MOUSE NO 1º ARQUIVO
+    py.leftClick(266, 556)          #COPIA O ARQUIVO
+    time.sleep(1)                   #ESPERA 1 SEGUNDO PARA EXECUTAR O PRÓXIMO CÓDIGO
+    py.leftClick(20, 745)           #CLICA NO BOTÇAO WINDOWS
     py.write('Pasta: REPOSITORIO_LOCAL_GIT') #PESQUISA PELA PASTA
-    py.press('Enter') #PRESSIONA ENTER
-    py.leftClick(1125, 160) #CLICA NA BARRA DE PESQUISA DA PASTA
-    py.write(str(entry3.get())) #ESCREVE O ENTRY3 NA BARRA DE PESQUISA DA PASTA
-    py.press('enter') #PRESSIONA ENTER
-    py.doubleClick(195, 220) #DOUBLECLICK NO PRIMEIRO ARQUIVO
-    py.rightClick(0, 230) #CLICA COM O DIREITO NO CANTO DA TELA
-    py.leftClick(6, 368) #CLICA COM O ESQUERDO EM COLAR
-    py.leftClick(630, 220) # CLICA EM SUBSTITUIR ARQUIVO
+    py.press('Enter')               #PRESSIONA ENTER
+    py.leftClick(1125, 160)         #CLICA NA BARRA DE PESQUISA DA PASTA
+    py.write(str(entry3.get()))     #ESCREVE O ENTRY3 NA BARRA DE PESQUISA DA PASTA
+    py.press('enter')               #PRESSIONA ENTER
+    py.doubleClick(195, 220)        #DOUBLECLICK NO PRIMEIRO ARQUIVO
+    py.rightClick(0, 230)           #CLICA COM O DIREITO NO CANTO DA TELA
+    py.leftClick(6, 368)            #CLICA COM O ESQUERDO EM COLAR
+    py.leftClick(630, 220)          #CLICA EM SUBSTITUIR ARQUIVO
 
     #AUTOMATIZANDO GITBASH
-    py.rightClick(1150, 220) #CLICA COM O DIREITO DENTRO DA PASTA
-    py.leftClick(1023, 447) #CLICA COM O ESQUERDO NO GITBASH
-    time.sleep(2) #ESPERA DE 2 SEGUNDOS
-    py.leftClick(395, 188) #CLICA DENTRO DO TERMINAL GITBASH
-    py.write('git status') #ESCREVE DENTRO DO TERMINAL
-    py.press('enter') #PRESSIONA ENTER
-    time.sleep(0.5) #ESPERA DE 0.5 SEGUNDOS
+
+    py.rightClick(1150, 220)        #CLICA COM O DIREITO DENTRO DA PASTA
+    py.leftClick(1023, 447)         #CLICA COM O ESQUERDO NO GITBASH
+    time.sleep(2)                   #ESPERA DE 2 SEGUNDOS
+    py.leftClick(395, 188)          #CLICA DENTRO DO TERMINAL GITBASH
+    py.write('git status')          #ESCREVE DENTRO DO TERMINAL
+    py.press('enter')               #PRESSIONA ENTER
+    time.sleep(0.5)                 #ESPERA DE 0.5 SEGUNDOS
     py.write(f'git add {str(entry2.get())}') #ESCREVE O ENTRY2 NO TERMINAL
-    py.press('enter') #PRESSIONA ENTER
-    time.sleep(0.5) #ESPERA DE 0.5 SEGUNDOS
+    py.press('enter')               #PRESSIONA ENTER
+    time.sleep(0.5)                 #ESPERA DE 0.5 SEGUNDOS
     py.write(f'git commit -m "{str(entry4.get())}"') #ESCREVE O ENTRY4 NO TERMINAL
-    py.press('enter') #PRESSIONA ENTER
-    time.sleep(0.5) #ESPERA DE 0.5 SEGUNDOS
-    py.write('git status') #ESCREVE NO TERMINAL
-    py.press('enter') #PRESSIONA O ENTER
-    time.sleep(0.5) #ESPERA DE 0.5 SEGUNDOS
-    py.write('git push') #ESCREVE NO TERMINAL
-    py.press('enter') #PRSSIONA ENTER
+    py.press('enter')               #PRESSIONA ENTER
+    time.sleep(0.5)                 #ESPERA DE 0.5 SEGUNDOS
+    py.write('git status')          #ESCREVE NO TERMINAL
+    py.press('enter')               #PRESSIONA O ENTER
+    time.sleep(0.5)                 #ESPERA DE 0.5 SEGUNDOS
+    py.write('git push')            #ESCREVE NO TERMINAL
+    py.press('enter')               #PRSSIONA ENTER
 
 janela = Tk()
 janela.geometry('400x400')
